@@ -2,13 +2,14 @@
 
 LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool.
 - [LangChain documentation](https://docs.langchain.com/oss/python/langchain/overview)
-- [LangChain integrations packages](https://docs.langchain.com/oss/python/integrations/providers/overview
-)
+- [LangChain integrations packages](https://docs.langchain.com/oss/python/integrations/providers/overview)
+
 ```bash
 uv add langchain
 # Requires Python 3.10+
 ```
 LangChain provides integrations to hundreds of LLMs and thousands of other integrations. These live in independent provider packages e.g.:
+
 ```bash
 # Installing the OpenAI integration
 uv add langchain-openai
