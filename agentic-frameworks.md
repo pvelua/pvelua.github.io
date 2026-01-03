@@ -7,6 +7,9 @@ A comprehensive overview of Python frameworks for implementing complex agentic f
 Microsoft has recently consolidated its offerings. Microsoft Agent Framework is the successor to Semantic Kernel for building AI agents. The goal is to provide a unified, enterprise-grade platform for developing, deploying, and managing AI agents.
 
 Released in public preview on October 1, 2025, Microsoft Agent Framework merges AutoGen's dynamic multi-agent orchestration with Semantic Kernel's production foundations. The framework supports both Python and .NET.
+- [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview)
+- [Microsoft’s Agentic Frameworks: AutoGen and Semantic Kernel](https://devblogs.microsoft.com/autogen/microsofts-agentic-frameworks-autogen-and-semantic-kernel/)
+- [AutoGen and Semantic Kernel, Part 2](https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-autogen-part-2/)
 
 **Key characteristics:**
 - AutoGen allows multiple agents to communicate by passing messages in a loop. Each agent can respond, reflect, or call tools based on its internal logic. It has asynchronous agent collaboration, making it particularly useful for research and prototyping scenarios.
@@ -27,6 +30,16 @@ class MenuPlugin:
 ## 2. **CrewAI**
 
 CrewAI is a fast, lightweight Python framework built from scratch, independent of other agent frameworks like LangChain. It enables developers to create autonomous AI agents with high-level simplicity (Crews) and precise, event-driven control (Flows) for tailored, collaborative intelligence and task orchestration.
+- [CrewAI](https://www.crewai.com)
+- [CrewAI Documentation](https://docs.crewai.com)
+```bash
+uv tool install crewai            # Install crewai tool
+uv tool list                      # confirm tool installation
+uv tool install crewai --upgrade        # upgrade CrewAI tool
+crewai create crew <your_project_name>  # create project scaffolding
+crewai install
+crewai run
+```
 
 **Key characteristics:**
 - CrewAI offers a high-level abstraction that simplifies building agent systems by handling most of the low-level logic for you.
@@ -38,6 +51,10 @@ CrewAI is a fast, lightweight Python framework built from scratch, independent o
 ## 3. **Hugging Face Smolagents**
 
 Smolagents is an open-source Python library designed to make it extremely easy to build and run agents using just a few lines of code. Key features include simplicity—the logic for agents fits in roughly a thousand lines of code, with abstractions kept to their minimal shape above raw code.
+- [Hugging Face smaolagents](https://huggingface.co/docs/smolagents/en/index)
+```bash
+pip install 'smolagents[toolkit]'  # Includes default tools like web search
+```
 
 **Distinctive approach — Code Agents:**
 Writing actions as code snippets is demonstrated to work better than the current industry practice of letting the LLM output a dictionary of tools it wants to call: uses 30% fewer steps and reaches higher performance on difficult benchmarks.
@@ -60,6 +77,15 @@ For security, they provide options at runtime including a secure Python interpre
 ## 4. **Agno (formerly Phidata)**
 
 Agno, previously known as Phidata, is an open-source framework for building agentic systems that allows developers to build, ship, and monitor AI agents with memory, knowledge, tools, and reasoning capabilities.
+- [Agno - Framework and AgentOS](https://www.agno.com)
+- [Agnoi Documentation](https://docs.agno.com)
+- [Agno - GitHuib](https://github.com/agno-agi/agno)
+```bash
+uv pip install -U agno anthropic mcp 'fastapi[standard]' sqlalchemy
+export ANTHROPIC_API_KEY=sk-***
+fastapi dev agno_agent.py
+```
+
 
 **Performance claims:**
 Agno is designed with simplicity, performance, and model agnosticism in mind. Agent instantiation is measured at less than 5μs, significantly outperforming competing frameworks. Memory usage is optimized to 50x lower than LangGraph.
@@ -84,6 +110,15 @@ Agno is a multi-agent framework, runtime, and control plane. Build agents, teams
 ## 5. **LlamaIndex Workflows**
 
 LlamaIndex Workflows 1.0 is a lightweight framework for building complex, multi-step agentic AI applications in Python and TypeScript. It allows developers to define complex AI application logic for agents without losing control of the execution flow.
+- [LlamaIndex - the most accurate agentic OCR and document-specific AI workflows](https://www.llamaindex.ai)
+- [LlamaIndex Workflows](https://www.llamaindex.ai/workflows)
+- [LlamaIndex Workflows - Documentation](https://developers.llamaindex.ai/python/llamaagents/workflows/)
+```bash
+uv tool install -U llamactl   # install LlamaIndx CLI
+llamactl --help
+llamactl init                 # create project scaffolding
+llamactl serve                # run the project
+```
 
 **Architecture:**
 A workflow is an event-driven, step-based way to control the execution flow. Your application is divided into Steps which are triggered by Events, and themselves emit Events which trigger further steps. By combining steps and events, you can create arbitrarily complex flows.
@@ -106,6 +141,11 @@ Workflows leverages the speed of async workflows for blazingly fast runs and eas
 ## 6. **Pydantic AI**
 
 Pydantic AI is a Python agent framework designed to help you quickly build production-grade applications with Generative AI. Built by the Pydantic Team—Pydantic Validation is the validation layer of the OpenAI SDK, the Anthropic SDK, LangChain, LlamaIndex, AutoGPT, CrewAI, and many more.
+- [Pydantic AI](https://ai.pydantic.dev)
+```bash
+pip install pydantic-ai
+pip install "pydantic-ai[examples]"
+```
 
 **Key features:**
 It's fully type-safe, designed to give your IDE as much context as possible for auto-completion and type checking. It includes powerful evals for systematically testing agent performance, MCP and A2A integration, human-in-the-loop tool approval, durable execution for long-running workflows, and graph support for complex applications.
@@ -124,12 +164,22 @@ agent = Agent(
 ## 7. **OpenAI Agents SDK (Swarm successor)**
 
 The OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. Provider-agnostic, it supports the OpenAI Responses and Chat Completions APIs, along with 100+ other LLMs. Core features include Agents with tools, instructions, and guardrails; Handoffs for specialized control transfers between agents; Guardrails for safety checks; and Tracing for debugging and optimizing workflows.
+- [OpenAI Agents SDK](https://github.com/openai/openai-agents-python)
+```bash
+uv init
+uv add openai-agents
+```
 
 ---
 
 ## 8. **Haystack**
 
 Haystack is an open-source Python framework for building customizable, production-ready AI applications. With its modular architecture, it supports retrieval-augmented generation (RAG), agent workflows, and advanced search systems. Haystack integrates seamlessly with tools like OpenAI, Hugging Face, and Elasticsearch.
+- [Deepset AI](https://www.deepset.ai)
+- [Haysstack AI Framework](https://github.com/deepset-ai/haystack)
+```bash
+pip install haystack-ai
+```
 
 ---
 
