@@ -187,11 +187,11 @@ pip install haystack-ai
 
 | Framework | Best For | Complexity | Multi-Agent | Async |
 |-----------|----------|------------|-------------|-------|
-| **AutoGen/MS Agent Framework** | Research, enterprise orchestration | Medium-High | ✅ Native | ✅ |
+| **AutoGen/MS Agent** | Research, enterprise orchestration | Medium-High | ✅ Native | ✅ |
 | **CrewAI** | Role-based teams, rapid prototyping | Low | ✅ Native | ✅ |
 | **Smolagents** | Minimal code, code-as-action pattern | Very Low | Limited | ✅ |
 | **Agno** | Performance-critical, production | Low-Medium | ✅ Native | ✅ |
 | **LlamaIndex Workflows** | Event-driven, RAG-heavy apps | Medium | ✅ | ✅ |
 | **Pydantic AI** | Type-safety, validation-focused | Low-Medium | Via A2A | ✅ |
 
-Given your systematic testing framework goals, **CrewAI** and **Agno** might be particularly interesting for comparing against LangChain patterns—they offer similar abstractions with different architectural philosophies. **Smolagents** would be excellent for testing the "code agents" paradigm versus traditional tool-calling approaches.
+---
