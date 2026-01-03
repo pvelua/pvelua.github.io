@@ -5,3 +5,4 @@ I use this side to publish links to libraries and documentation plus, brief over
 ## Table of Contents
 
 - [Python Agentic AI Frameworks](/agentic-frameworks.md)
+- [angChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
