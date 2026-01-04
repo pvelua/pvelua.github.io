@@ -5,4 +5,5 @@ I use this side to publish links to libraries and documentation plus, brief over
 ## Table of Contents
 
 - [Python Agentic AI Frameworks](/agentic-frameworks.md)
-- [angChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
+- [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
+- [LangChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)

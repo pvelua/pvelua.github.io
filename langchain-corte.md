@@ -1,3 +1,5 @@
+[← Back to Home](/)
+
 # LangChain Core: Prompts and Runnables for Agent Flows
 
 LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool.
