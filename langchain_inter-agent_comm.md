@@ -2,7 +2,7 @@
 
 ## Intra-Application Agent Communication in LangGraph
 
-LangGraph provides **three primary mechanisms** for agents to communicate whithin the sam process/graph:
+LangGraph provides **three primary mechanisms** for agents to communicate whithin the same process/graph:
 
 ### 1. Shared State (Most Common)
 
@@ -169,7 +169,7 @@ tagged_message = f"<agent>research_agent</agent><message>{response}</message>"
 ### Communication Pattern Comparison
 
 | Pattern | Control Flow | State Visibility | Best For |
-|---------|--------------|------------------|----------|
+|:--------|:-------------|:-----------------|:---------|
 | **Shared State** | Predetermined edges | Full transparency | Sequential pipelines, debugging |
 | **LLM Delegation** | Dynamic (LLM decides) | Full transparency | Flexible routing, natural language |
 | **Command Handoffs** | Explicit in code | Controlled | Complex workflows, conditional logic |

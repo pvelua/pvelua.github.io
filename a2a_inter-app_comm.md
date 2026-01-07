@@ -7,7 +7,7 @@ The Agent2Agent (A2A) protocol is a communication protocol for artificial intell
 ### Scope of Communication vs. LangGraph
 
 | Aspect | LangGraph | Google A2A |
-|--------|-----------|------------|
+|:-------|:----------|:-----------|
 | **Scope** | **Intra-application** — agents within the same process/graph | **Inter-application** — agents across different systems, vendors, frameworks |
 | **Network** | In-memory, same runtime | HTTP/gRPC over network |
 | **Coupling** | Tightly coupled (shared state) | Loosely coupled (opaque, no shared internals) |
@@ -55,7 +55,7 @@ A2A aims to: Break Down Silos: Connect agents across different ecosystems. Enabl
 **Comparison Table:**
 
 | Feature | LangGraph (Internal) | A2A (External) |
-|---------|---------------------|----------------|
+|:--------|:--------------------|:---------------|
 | **State Sharing** | Full — shared `State` dict | None — agents are opaque black boxes |
 | **Discovery** | Hardcoded in graph definition | Dynamic via Agent Cards (`/.well-known/agent.json`) |
 | **Communication** | Function calls, `Command` objects | JSON-RPC 2.0 over HTTP/gRPC |
@@ -188,10 +188,18 @@ agent = create_react_agent(
 ### Summary: Complementary, Not Competing
 
 | Use Case | Solution |
-|----------|----------|
+|:---------|:---------|
 | Agents **within** your LangGraph application | LangGraph shared state, `Command` routing |
 | Agents **across** different frameworks/vendors | A2A protocol |
 | Agent **accessing tools/databases** | MCP (Model Context Protocol) |
 | **Combining all three** | LangGraph for internal orchestration, MCP for tools, A2A for external agents |
 
 A2A tries to complement MCP where A2A is focused on a different problem, while MCP focuses on lowering complexity to connect agents with tools and data, A2A focuses on how to enable agents to collaborate in their natural modalities. It allows agents to communicate as agents (or as users) instead of as tools.
+
+---
+
+### Referneces
+
+- [Agent2Agent (A2A) Protocol](https://a2a-protocol.org/latest/)
+- [What is A2A protocol (Agent2Agent)?](https://www.ibm.com/think/topics/agent2agent-protocol)
+- [Google Open-Sources Agent2Agent Protocol for Agentic Collaboration](https://www.infoq.com/news/2025/04/google-agentic-a2a/)
