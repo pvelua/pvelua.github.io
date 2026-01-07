@@ -343,7 +343,7 @@ agent = LlmAgent(
 ## Memory (Long-term Knowledge)
 
 - Session and State focus on the current interaction – the history and data of the single, active conversation. MemoryService manages the Long-Term Knowledge Store, handling ingesting information from completed Sessions into the long-term store, and provides methods to search this stored knowledge based on queries.
-- [ntroduction to Conversational Context: Session, State, and Memory](https://google.github.io/adk-docs/sessions/)
+- [Introduction to Conversational Context: Session, State, and Memory](https://google.github.io/adk-docs/sessions/)
 
 
 ### Memory vs State

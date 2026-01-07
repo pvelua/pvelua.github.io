@@ -5,5 +5,10 @@ I use this side to publish links to libraries and documentation plus, brief over
 ## Table of Contents
 
 - [Python Agentic AI Frameworks](/agentic-frameworks.md)
-- [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
-- [LangChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
+- Google Agent Developmnet Kit (ADK):
+    - [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
+    - [Inter-application Agents Communication with Google A2A](/a2a_inter-app_comm.md)
+- LangChain / LangGraph Framework:
+    - [LangChain & LangGraph — Concise Guide](/langchain-graph-guide.md)
+    - [Intra-Application Agent Communication in LangGraph](/langchain_inter-agent_comm.md)
+    - [LangChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
