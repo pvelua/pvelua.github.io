@@ -155,33 +155,111 @@ if task.status.state == "completed":
 
 ### LangChain/LangGraph + A2A Integration
 
-We're releasing native support for A2A in Agent Development Kit (ADK), a powerful open source agent framework released by Google. This makes it easy to build A2A agents if you are already using ADK.
+The **Agent2Agent (A2A)** protocol is an open standard (recently donated by Google to the Linux Foundation) that allows AI agents to "discover" and talk to each other regardless of the framework they were built in (LangChain, ADK, CrewAI, etc.).
 
-LangChain was listed as a partner for A2A, and integration is possible:
+In the context of **Google Agent Developer Kit (ADK)**, using A2A allows your LangGraph agent to act as a "client" that calls other specialized agents, or as a "server" that other agents can call.
+
+Here is the concise guide to connecting them.
+
+#### 1\. The Concept: "Agent Cards"
+
+A2A relies on a **Discovery** mechanism. Every A2A-compliant agent must publish an **Agent Card** (a JSON file usually at `.well-known/agent.json`) that tells others:
+
+  * **Identity:** Name and ID.
+  * **Capabilities:** What it can do (Input/Output schemas).
+  * **Auth:** How to connect (OIDC, Keys).
+
+#### 2\. The Setup (Server Side)
+
+First, you typically build a specialized agent using the **Google ADK** and "expose" it as an A2A endpoint.
+
+**Install ADK:**
+
+```bash
+uv add google-adk
+```
+
+**Create the Agent Server:**
+This code spins up a server that LangGraph can talk to.
 
 ```python
-# LangGraph agent that can call external A2A agents
+# server.py
+from google.adk.agents import Agent
+from google.adk.models import VertexGenAIModel
+from google.adk.a2a.utils.agent_to_a2a import to_a2a
+import uvicorn
 
-from langgraph.prebuilt import create_react_agent
-from langchain_core.tools import tool
-from a2a import A2AClient
-
-@tool
-def delegate_to_supplier(query: str) -> str:
-    """Delegate inventory queries to external supplier agent via A2A."""
-    client = A2AClient("https://supplier.example.com")
-    response = client.send_message({
-        "role": "user",
-        "parts": [{"text": query}]
-    })
-    return response.task.artifacts[0].parts[0].text
-
-# LangGraph agent with A2A tool
-agent = create_react_agent(
-    model=llm,
-    tools=[delegate_to_supplier, local_tools...]
+# 1. Define the ADK Agent
+model = VertexGenAIModel(model_name="gemini-1.5-flash")
+specialized_agent = Agent(
+    name="financial_analyst",
+    instruction="You are an expert financial analyst. Analyze the provided stock data.",
+    model=model
 )
+
+# 2. Wrap it with A2A Protocol (Auto-generates the Agent Card)
+# This creates a FastAPI app compliant with A2A specs
+a2a_app = to_a2a(specialized_agent, port=8000)
+
+# 3. Run it
+if __name__ == "__main__":
+    uvicorn.run(a2a_app, host="0.0.0.0", port=8000)
 ```
+
+#### 3\. The Integration (LangGraph Client Side)
+
+Now, inside your **LangGraph** application, you treat this external A2A agent as a **Tool**. You don't need to manually parse the JSON; you can just send a standardized "Task".
+
+```python
+import httpx
+from langchain_core.tools import tool
+from langgraph.graph import StateGraph, MessagesState, START
+
+# --- 1. Define the A2A Client Tool ---
+@tool
+def call_financial_agent(query: str):
+    """Delegates a financial question to the specialized A2A Analyst Agent."""
+    
+    # A2A uses a standardized '/run' or '/tasks' endpoint
+    url = "http://localhost:8000/run" 
+    
+    payload = {
+        "task": {
+            "input": query,
+            # A2A allows passing context/history if needed
+        }
+    }
+    
+    # In production, you would add OIDC/Auth headers here
+    response = httpx.post(url, json=payload, timeout=30.0)
+    return response.json().get("result")
+
+# --- 2. Use in LangGraph ---
+# Add this tool to your LangGraph node like any other
+def orchestrator_node(state: MessagesState):
+    # Logic to decide to call the tool...
+    # For demo, we assume we call it directly:
+    result = call_financial_agent.invoke(state["messages"][-1].content)
+    return {"messages": [result]}
+
+# ... (Standard LangGraph Setup: Workflow, Edges, Compile) ...
+```
+
+### Summary of the Flow
+
+1.  **Discovery:** The generic agent (LangGraph) checks the `agent.json` of the specialist (ADK) to see if it can handle the task (optional, or hardcoded for simple use).
+2.  **Handshake:** LangGraph sends a `Task` object over HTTP.
+3.  **Execution:** The ADK agent processes it using its internal logic/tools.
+4.  **Response:** The ADK agent returns a `Result` object.
+
+### Why use this over a standard API?
+
+  * **Standardization:** If you switch the backend of the "Financial Agent" from ADK to AutoGen or CrewAI later, the protocol (inputs/outputs) remains the same.
+  * **Security:** A2A has built-in patterns for passing **Identity Tokens**, so the sub-agent knows *exactly* which user is asking (crucial for enterprise permissions).
+
+... [How to build an AI agent with MCP, ADK, and A2A on Google Cloud](https://www.youtube.com/watch?v=6mQwHqK1I5w)
+
+This [YouTube video](http://googleusercontent.com/youtube_content/2) provides a complete walkthrough of building an agent with the ADK and exposing it via the A2A protocol, perfectly matching the setup described above.
 
 ---
 
