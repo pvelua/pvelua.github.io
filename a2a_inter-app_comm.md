@@ -257,9 +257,7 @@ def orchestrator_node(state: MessagesState):
   * **Standardization:** If you switch the backend of the "Financial Agent" from ADK to AutoGen or CrewAI later, the protocol (inputs/outputs) remains the same.
   * **Security:** A2A has built-in patterns for passing **Identity Tokens**, so the sub-agent knows *exactly* which user is asking (crucial for enterprise permissions).
 
-... [How to build an AI agent with MCP, ADK, and A2A on Google Cloud](https://www.youtube.com/watch?v=6mQwHqK1I5w)
-
-This [YouTube video](http://googleusercontent.com/youtube_content/2) provides a complete walkthrough of building an agent with the ADK and exposing it via the A2A protocol, perfectly matching the setup described above.
+[How to build an AI agent with MCP, ADK, and A2A](https://www.youtube.com/watch?v=6mQwHqK1I5w) - this YouTube video provides a complete walkthrough of building an agent with the ADK and exposing it via the A2A protocol, perfectly matching the setup described above.
 
 ---
 
