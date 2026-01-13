@@ -2,6 +2,19 @@
 
 # Neo4j Graph Data Science (GDS) Library
 
+Table of Contents:
+- [What is the Neo4j GDS Library?](#what-is-the-neo4j-gds-library)
+- [In-memory Graph Projections](#in-memory-graph-projections)
+- [Part 1: Centrality Algorithms (Finding the VIPs)](#part-1-centrality-algorithms-finding-the-vips)
+- [Part 2: Community Detection (Finding the Groups)](#part-2-community-detection-finding-the-groups)
+- [Part 3: Similarity Algorithms (The Recommendation Engine)](#part-3-similarity-algorithms-the-recommendation-engine)
+- [Part 4: Graph Machine Learning (Predicting the Future)](#part-4-graph-machine-learning-predicting-the-future)
+- [Part 5: Graph Embeddings (The Translator)](#part-5-graph-embeddings-the-translator)
+- [Part 6: The GDS Python Client (The Control Center)](#part-6-the-gds-python-client-the-control-center)
+- [Complete End-to-End "Recipe" using the GDS Python Client](#complete-end-to-end-recipe-using-the-gds-python-client)
+- [Streaming vs. Writing vs. Mutating - Managing Large Results](#streaming-vs-writing-vs-mutating---managing-large-results)
+
+
 ## What is the Neo4j GDS Library?
 
 The GDS library is a plugin for the Neo4j Graph Database that enables you to perform **analytics** and **machine learning** directly on your graph data.
@@ -392,18 +405,7 @@ gds.run_cypher("MATCH (n) RETURN n LIMIT 5")
 
 ---
 
-### **Summary of our Learning Journey**
-
-We have now covered the full GDS stack:
-
-1. **Projections:** Loading data from Disk to Memory.
-2. **Algorithms:** Analyzing the graph (Centrality, Community).
-3. **Embeddings:** Translating the graph into vectors for ML.
-4. **Python Client:** The tool to orchestrate it all and integrate with the rest of your Data Science stack.
-
----
-
-## A Complete End-to-End "Recipe" using the GDS Python Client
+## Complete End-to-End "Recipe" using the GDS Python Client
 
 This script simulates a real-world workflow:
 
