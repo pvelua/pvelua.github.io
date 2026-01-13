@@ -524,3 +524,87 @@ print("\n✅ In-memory graph dropped.")
 
 ---
 
+## Streaming vs. Writing vs. Mutating - Managing Large Results
+
+The final piece of the puzzle is usually **Deployment/Scale**. When moving to production with millions of nodes, you can't just run *stream()*, or you will crash your application with too much data. Instead you should consider alternative options for consuming GDS algorithm results. Here is how **Streaming**, **Mutating**, and **Writing** differ, and the "Golden Workflow" for large datasets.
+
+### 1. The Three Execution Modes
+
+#### A. Streaming (`.stream`)
+
+* **What it does:** Runs the algorithm and sends the results immediately over the network to your Python client (e.g., Pandas DataFrame).
+* **Where data goes:** RAM (GDS) → Network → RAM (Your Laptop/Server).
+* **Best for:**
+    * Debugging, inspecting top 10 results, or handling small graphs (<100k nodes).
+    * GraphRAG: retrieving the top 5 most central nodes to add to a specific prompt context.
+
+* **The Danger:** If you `stream` 10 million nodes, you are trying to shove 10 million rows over a network connection into your Python memory. This causes timeouts and "Out of Memory" (OOM) crashes.
+
+#### B. Mutating (`.mutate`)
+
+* **What it does:** Runs the algorithm and saves the result *temporarily* back into the in-memory graph projection. It touches neither the hard disk nor the network.
+* **Where data goes:** Stays entirely in GDS RAM.
+* **Best for:**
+    * Chaining Algorithms ("Pipeline"): This is the secret to handling large data. You calculate PageRank, "mutate" the score back to the in-memory node, and then use that score as a weight for a *second* algorithm (e.g., Louvain) immediately.
+    * Graph Embeddings: You often generate FastRP embeddings in memory to run KNN, without ever needing to save the vectors to disk.
+
+
+
+#### C. Writing (`.write`)
+
+* **What it does:** Runs the algorithm and updates the actual Neo4j Database on disk (e.g., adds a property `communityId: 42` to the node).
+* **Where data goes:** GDS RAM → Transaction Log → Hard Disk.
+* **Best for:**
+    * Persistence: You need the results to survive a server restart.
+    * GraphRAG Retrieval: Your retriever needs to query: *"MATCH (n) WHERE n.community = 12..."*. This is only possible if the data is written to disk.
+* **The Cost:** This is the slowest operation because it involves database transactions and disk I/O.
+
+---
+
+### 2. The "Golden Workflow" for Large Graphs
+
+When you scale up your app, **never** stream the whole graph. Instead, use the **Mutate → Write** pattern.
+
+**Scenario:** You want to run Louvain for community detection, but you want to calculate Weighted PageRank first to help weigh the importance of nodes *inside* those communities.
+
+The Code (Python Client):
+
+```python
+# 1. Project the Graph
+G, _ = gds.graph.project("ragGraph", ["Entity"], ["RELATED_TO"])
+
+# 2. STEP A: MUTATE (Intermediate Calculation)
+# Calculate PageRank, but don't save to Disk. Just keep it in RAM.
+gds.pageRank.mutate(G, mutateProperty='rank')
+
+# 3. STEP B: WRITE (Final Result)
+# Run Louvain using the 'rank' we just calculated in memory as a weight.
+# Write ONLY the final Community ID to disk for your RAG app to use.
+gds.louvain.write(G, 
+    nodeProperties=['rank'],  # Use the in-memory property!
+    writeProperty='communityId'
+)
+
+# 4. Cleanup
+G.drop()
+```
+
+### 3. Why this matters for a GraphRAG App
+
+You mentioned you have 100+ documents and 1000s extracted entities.
+
+* **Small Scale (Now):** You can `stream` the Louvain results, group them in Python, and send them to the LLM to generate summaries.
+* **Large Scale (Future):** Streaming 50,000 entities to Python just to group them is slow.
+    * **Better approach:** Run `louvain.write`.
+    * Then, use Cypher to fetch only one community at a time: `MATCH (n) WHERE n.communityId = 12 RETURN n.text`. This pushes the heavy lifting to the database, keeping your Python app light.
+
+### 4. Special Feature: `writeNodeProperties`
+
+Sometimes you `mutate` a result (like Embeddings) to run a similarity search, but later decide, "Actually, I want to save those embeddings to disk now." You don't need to re-run the algorithm. You can simply flush the in-memory property to disk:
+
+```python
+# Writes the 'rank' property we created in step 2 to the actual database
+gds.graph.writeNodeProperties(G, ["rank"])
+
+```
+---
