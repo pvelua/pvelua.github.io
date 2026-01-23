@@ -4,7 +4,9 @@ I use this site for publishing links to various libraries and releated documenta
 
 ## Table of Contents
 
-- [Python Agentic AI Frameworks](/agentic-frameworks.md)
+- General Topics:
+    - [Python Agentic AI Frameworks](/agentic-frameworks.md)
+
 - Google AI & Agent Developmnet Kit (ADK):
     - [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
     - [Inter-application Agents Communication with Google A2A](/a2a_inter-app_comm.md)
@@ -16,3 +18,6 @@ I use this site for publishing links to various libraries and releated documenta
 
 - Neo4J Graph Database:
     - [Graph Data Science (GDS) Library](/neo4j_GDS_library.md)
+
+- Various::
+    - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
