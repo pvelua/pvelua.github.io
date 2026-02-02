@@ -46,6 +46,6 @@ A team led by Yu Deng, Zaher Hani, and Xiao Ma made a major breakthrough on Hilb
 
 The year itself provided a rare numerical treat. **2025 is a perfect square** (45ꜛ2), and it perfectly illustrates **Nicomachus's Theorem**:
 ```text
-452 = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)ꜛ2=1ꜛ3 + 2ꜛ3 + 3ꜛ3 + 4ꜛ3 + 5ꜛ3 + 6ꜛ3 + 7ꜛ3 + 8ꜛ3 + 9ꜛ3
+452 = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)ꜛ2 = 1ꜛ3 + 2ꜛ3 + 3ꜛ3 + 4ꜛ3 + 5ꜛ3 + 6ꜛ3 + 7ꜛ3 + 8ꜛ3 + 9ꜛ3
 ```
 This property—where the square of a sum equals the sum of cubes—made 2025 a popular subject in recreational mathematics this year.
