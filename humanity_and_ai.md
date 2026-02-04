@@ -1,4 +1,5 @@
 [← Back to Home](/)
+
 # Humanity and Powerful AI
 
 ## Frontier Model Forum

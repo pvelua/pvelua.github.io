@@ -21,5 +21,6 @@ I use this site for publishing links to various libraries and releated documenta
 
 - Various::
     - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
+    - [umanity and Powerful AI](/humanity_and_ai.md)
 
 - [Useful Resources](/references.md)

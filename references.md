@@ -21,3 +21,13 @@
 - [PowerApps YouTube Channel](https://www.youtube.com/@MicrosoftPowerApps)
 
 ## Open AI
+
+## Encoders
+
+- [Ecoder Training Objectives and Requirements](/encoder_requirements_training.md)
+
+## Various Topics
+
+- [BrainGB](https://braingb.us): A Benchmark for Brain Network Analysis with Graph Neural Networks
+- [HippoRAG](https://arxiv.org/abs/2405.14831): Neurobiologically Inspired Long-Term Memory for Large Language Models
+    - [HippoRAG GitHub repository](https://github.com/OSU-NLP-Group/HippoRAG)
