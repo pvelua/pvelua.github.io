@@ -6,6 +6,7 @@ I use this site for publishing links to various libraries and releated documenta
 
 - General Topics:
     - [Python Agentic AI Frameworks](/agentic-frameworks.md)
+    - [Retrival Architecture & Libraries](/retrievals_architecture.md)
 
 - Google AI & Agent Developmnet Kit (ADK):
     - [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)

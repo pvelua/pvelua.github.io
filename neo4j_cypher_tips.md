@@ -6,7 +6,15 @@ Cypher is Neo4j's declarative graph query language. This Quick Start page provid
 
 Table of Contents:
 - [Cypher Syntax Guide](#cypher-syntax-guide)
-- [Questions & Answers](#questions--answers)
+- [Questions & Answers](#questions--answers):
+    - [Is 'p' in "MATCH (p:Person {name: 'Alice'}) RETURN p" just an alias?](#is-p-in-match-pperson-name-alice-return-p-just-an-alias)
+    - [In "MATCH (p:Person {name: 'Alice'})" can I use a wildcard to match several name?](#is-p-in-match-pperson-name-alice-return-p-just-an-alias)
+    - [Query didn't return any data - how to troublkeshoot?](#query-didnt-return-any-data---how-to-troublkeshoot)
+    - [Explain query: MATCH (a:Person {name: 'Alice'})-[:KNOWS*1..3]->(friend) RETURN friend.name](#explain-query-match-aperson-name-alice-knows13-friend-return-friendname)
+    - [What is the rule for using single quote 'value' vs. double "value" in property values?](#what-is-the-rule-for-using-single-quote-value-vs-double-value-in-property-values)
+    - [What relationship's directions are supported in MATCH?](#what-relationships-directions-are-supported-in-match)
+    - [Can I use multiple predicates sequentially?](#can-i-use-multiple-predicates-sequentially)
+    - [Can I combine several predicates with AND or OR in MATCH?](#can-i-combine-several-predicates-with-and-or-or-in-match)
 
 ---
 
