@@ -12,6 +12,7 @@ I use this site for publishing links to various libraries and releated documenta
     - [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
     - [Inter-application Agents Communication with Google A2A](/a2a_inter-app_comm.md)
     - [Google Vertex AI - Concise Guide](/vertex_ai_infra.md)
+
 - LangChain / LangGraph Framework:
     - [LangChain & LangGraph — Concise Guide](/langchain-graph-guide.md)
     - [Intra-Application Agent Communication in LangGraph](/langchain_inter-agent_comm.md)
@@ -24,10 +25,15 @@ I use this site for publishing links to various libraries and releated documenta
 - Various::
     - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
     - [Humanity and Powerful AI](/humanity_and_ai.md)
+    - [Various Tips and How To Dos...](/tips_and_tricks.md)
 
 - [Useful Resources](/references.md)
 
 - Blogs about projects in my GitHub repository:
+    - [ENGRAM Part 2: Unified Graph Retrieval from Long Documents and Multi-Agent Response Synthesis](https://igor-polyakov.com/2026/03/24/engram-part-2-unified-graph-retrieval-from-long-documents-and-multi-agent-response-synthesis/)
+    - [ENGRAM Part 1: GraphRAG with Hippocampal-Like Associative Retrieval](https://igor-polyakov.com/2026/03/23/engram-part-1-graphrag-with-hippocampal-like-associative-retrieval/)
+    - [MCP, A2A, and Human-in-the-Loop: A Multi-Agent Threat Intelligence System in Practice](https://igor-polyakov.com/2026/02/16/mcp-a2a-and-human-in-the-loop-a-multi-agent-threat-intelligence-system-in-practice/)
+    - [A Framework for Testing Agentic Design Patterns Using LangChain & LangGraph](https://igor-polyakov.com/2026/01/20/a-framework-for-testing-agentic-design-patterns-using-langchain-langgraph/)
     - [AI Agent with RAG-Assisted Declarative Query Generation for Data in Oracle Analytic Views](https://igor-polyakov.com/2026/01/28/ai-agent-with-rag-assisted-declarative-query-generation-for-data-in-oracle-analytic-views/)
     - [A Framework for Testing Agentic Design Patterns Using LangChain & LangGraph](https://igor-polyakov.com/2026/01/20/a-framework-for-testing-agentic-design-patterns-using-langchain-langgraph/)
     - [Building a GraphRAG System – Core Infrastructure & Document Ingestion](https://igor-polyakov.com/2025/11/17/building-a-graphrag-system-core-infrastructure-document-ingestion/)
