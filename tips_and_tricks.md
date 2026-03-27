@@ -7,6 +7,10 @@
 - [How to Resize Video Recording](#how-to-resize-video-recording)
 - [How to Bootstrap a New GitHub Project](#how-to-bootstrap-a-new-github-project)
 - [How to use GitHub Templates](#how-to-use-github-templates)
+- [How to use GitHub Actions](#how-to-use-github-actions)
+- [How to Update Claude Code](#how-to-update-claude-code)
+
+---
 
 ## How to Reduce PDF File Size
 To reduce the size of a PDF from the command line—especially one made of heavy scanned images—the industry standard tool you want is **Ghostscript** (`gs` - Ghostscript is a tool for creating, viewing, and transforming PostScript and PDF documents).
@@ -282,5 +286,79 @@ Since you are testing different **agentic design patterns** and building a **thr
 1.  Your **MinIO** or **ChromaDB** connection strings can stay consistent.
 2.  Your **Oracle DB** initialization scripts stay in a known location.
 3.  Every new experiment starts with the same clean, professional structure without you typing a single `mkdir` command.
+
+---
+
+## How to Update Claude Code
+
+### 1. Confirming no Claude-related processes are running on your Mac
+
+```bash
+# Check for any Claude Code (Node.js) processes
+ps aux | grep -i claude | grep -v grep
+
+# Also check for any node processes that might be Claude Code related
+ps aux | grep -i "claude-code" | grep -v grep
+
+# Check for the caffeinate process that Claude Code spawns (prevents Mac from sleeping)
+ps aux | grep caffeinate | grep -v grep
+```
+
+If you see any results, you can kill them with `kill <PID>` or, to be thorough:
+
+```bash
+# Kill all Claude Code related processes
+pkill -f "claude-code"
+pkill -f caffeinate  # only if it was spawned by Claude Code
+```
+
+### 2. Upgrading Claude Code
+
+Here's the full picture:
+
+**1. Confirm no Claude processes are running:**
+
+```bash
+# Check for any Claude Code processes
+ps aux | grep -i claude | grep -v grep
+
+# Check for caffeinate (Claude Code spawns this to prevent Mac from sleeping)
+ps aux | grep caffeinate | grep -v grep
+```
+
+If anything shows up, kill it with `kill <PID>` or `pkill -f "claude-code"`.
+
+**2. Upgrade Claude Code:**
+
+The recommended approach depends on how you originally installed it. The npm installation method is now deprecated — the native installer is faster, requires no dependencies, and auto-updates in the background.
+
+**If you installed via npm** (most likely given your setup), migrate to the native installer:
+
+```bash
+# Install the native binary
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Remove the old npm installation
+npm uninstall -g @anthropic-ai/claude-code
+```
+
+You can also run `claude install` from an existing npm installation to install the native binary alongside it, then remove the npm version.
+
+**If you're already on the native installer**, it auto-updates in the background. To force an immediate update:
+
+```bash
+claude update
+```
+
+**After upgrading**, verify the installation:
+
+```bash
+claude --version
+claude doctor
+```
+
+`claude doctor` will verify the installation type and version.
+
+**One note on release channels:** You can control which release channel Claude Code follows for auto-updates with the `autoUpdatesChannel` setting: "latest" (the default, new features immediately) or "stable" (about one week behind, skipping releases with major regressions). You can configure this via `/config → Auto-update channel` inside Claude Code.
 
 ---
