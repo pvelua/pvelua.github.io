@@ -27,6 +27,7 @@ I use this site for publishing links to various libraries and releated documenta
     - [Graph Views in Oracle DB](/oracle_graph_database.md)
 
 - Various::
+    - [2026 Major Breakthroughs in Mathematics, so far](/maths-2026-breakthroughs.md)
     - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
     - [Humanity and Powerful AI](/humanity_and_ai.md)
     - [Various Tips and How To Dos...](/tips_and_tricks.md)
