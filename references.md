@@ -9,7 +9,16 @@
 - [Anthropic YouTube Channel](https://www.youtube.com/@anthropic-ai)
 - [Anthropic’s Interpretability Research](https://transformer-circuits.pub)
 
+## Cloudflare
+- [Code Mode: the better way to use MCP](https://blog.cloudflare.com/code-mode/)
+- [Code Mode: give agents an entire API in 1,000 tokens](https://blog.cloudflare.com/code-mode-mcp/)
+- [Sandboxing AI agents, 100x faster](https://blog.cloudflare.com/dynamic-workers/)
+
+## Database & SQL
+- [SQL Maria - Oracle DB blog](https://sqlmaria.com/)
+
 ## Google
+- [TurboQuant: Redefining AI efficiency with extreme compression](https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/)
 
 ## LanghChain
 

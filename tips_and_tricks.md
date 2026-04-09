@@ -9,6 +9,7 @@
 - [How to use GitHub Templates](#how-to-use-github-templates)
 - [How to use GitHub Actions](#how-to-use-github-actions)
 - [How to Update Claude Code](#how-to-update-claude-code)
+- [What UI Clients for Databases...](#what-ui-clients-for-databases)
 
 ---
 
@@ -362,3 +363,19 @@ claude doctor
 **One note on release channels:** You can control which release channel Claude Code follows for auto-updates with the `autoUpdatesChannel` setting: "latest" (the default, new features immediately) or "stable" (about one week behind, skipping releases with major regressions). You can configure this via `/config → Auto-update channel` inside Claude Code.
 
 ---
+
+## What UI Clients for Databases...
+
+A few good options depending on what you prefer:
+
+**VS Code extension** — [Database Client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2) (by Weijan Chen) is the most popular one. Supports PostgreSQL, MySQL, SQLite, and others. You get a tree view of tables/columns, query editor with autocomplete, and inline result grids. It'll connect straight to `localhost:5532` with the engram credentials.
+
+**Standalone apps** — if you want something richer outside VS Code:
+
+- **pgAdmin 4** — the official PostgreSQL admin tool. Heaviest option but full-featured. You can run it in Docker too if you don't want to install it: `docker run -d --name pgadmin -p 5050:80 -e PGADMIN_DEFAULT_EMAIL=admin@engram.dev -e PGADMIN_DEFAULT_PASSWORD=admin dpage/pgadmin4`
+
+- **DBeaver** (Community Edition) — free, cross-platform, supports basically every database. If you're already using it for Oracle 23ai, it handles PostgreSQL equally well so you'd have both in one tool.
+
+- **TablePlus** — native macOS app, clean UI, fast. Free tier has some limitations but is enough for dev work.
+
+Given you already have an Oracle 23ai container, DBeaver is probably the most practical choice since it handles both databases in a single app. But for quick "check a query" work without leaving the editor, the VS Code extension is hard to beat.
