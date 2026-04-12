@@ -38,12 +38,12 @@ Launched in March 2026, a 10-year collaborative initiative between **IBM and ETH
 ### Upcoming Milestones: The 2026 Fields Medal
 The math community is currently focused on the announcement of the **Fields Medalists** (the "Nobel Prize of Math") in July. Current top contenders based on breakthroughs finalized in late 2025 and early 2026 include:
 
-| Candidate | Primary Breakthrough Area |
-| :--- | :--- |
-| **Hong Wang** | 3D Kakeya Conjecture / Geometric Measure Theory |
+| Candidate           | Primary Breakthrough Area |
+|:--------------------|:--------------------------|
+| **Hong Wang**       | 3D Kakeya Conjecture / Geometric Measure Theory |
 | **Jacob Tsimerman** | André-Oort Conjecture / Arithmetic Geometry |
-| **Jack Thorne** | Arithmetic Langlands Program |
-| **Sam Raskin** | Geometric Langlands Conjecture |
+| **Jack Thorne**     | Arithmetic Langlands Program |
+| **Sam Raskin**      | Geometric Langlands Conjecture |
 
 
 
@@ -86,12 +86,13 @@ Neuromorphic **hardware** refers to the physical silicon chips and circuits desi
 * **Asynchronous Communication:** These chips don't have a central "clock." Different parts of the chip operate independently and only communicate when there is a signal to pass.
 
 ### Notable Examples of Neuromorphic Hardware:
-| Hardware | Developer | Key Feature |
-| :--- | :--- | :--- |
-| **Loihi 2** | Intel | Uses asynchronous spiking; highly programmable for robotics. |
-| **TrueNorth** | IBM | One of the first large-scale chips with 1 million neurons. |
+
+| Hardware      | Developer           | Key Feature   |
+|:--------------|:--------------------|:--------------|
+| **Loihi 2**   | Intel               | Uses asynchronous spiking; highly programmable for robotics. |
+| **TrueNorth** | IBM                 | One of the first large-scale chips with 1 million neurons. |
 | **SpiNNaker** | Univ. of Manchester | A massively parallel system designed for real-time brain simulation. |
-| **Akida** | BrainChip | Focused on "edge" AI (processing data locally on sensors). |
+| **Akida**     | BrainChip           | Focused on "edge" AI (processing data locally on sensors). |
 
 ---
 
@@ -104,11 +105,12 @@ The primary "innovation" of neuromorphic hardware isn't necessarily pure raw spe
 ---
 
 ### Comparison at a Glance
-| Feature | Traditional (Von Neumann) | Neuromorphic |
-| :--- | :--- | :--- |
-| **Processor/Memory** | Separate (CPU + RAM) | Integrated (Neuron + Synapse) |
-| **Logic Type** | Boolean/Binary (0 and 1) | Spiking (Temporal pulses) |
-| **Energy Use** | High (Constant) | Low (Event-driven) |
-| **Best Use Case** | General compute, High-precision math | Pattern recognition, Sensor fusion, Robotics |
+
+| Feature              | Traditional (Von Neumann) | Neuromorphic |
+|:---------------------|:--------------------------|:-------------|
+| **Processor/Memory** | Separate (CPU + RAM)      | Integrated (Neuron + Synapse) |
+| **Logic Type**       | Boolean/Binary (0 and 1)  | Spiking (Temporal pulses) |
+| **Energy Use**       | High (Constant)           | Low (Event-driven) |
+| **Best Use Case**    | General compute, High-precision math | Pattern recognition, Sensor fusion, Robotics |
 
 ---
