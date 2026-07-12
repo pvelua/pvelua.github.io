@@ -36,6 +36,16 @@ I use this site for publishing links to various libraries and releated documenta
 - [Useful Resources](/references.md)
 
 - Blogs about projects in my GitHub repository:
+    - [Standing Up Your Own Agents: ENGRAM Adds an Agent Manager Role](https://igor-polyakov.com/2026/07/12/standing-up-your-own-agents-engram-adds-an-agent-manager-role/)
+    - [A Brain Between Sessions — and Between Agents: ENGRAM Learns to Recall on Demand](https://igor-polyakov.com/2026/07/10/a-brain-between-sessions-and-between-agents-engram-learns-to-recall-on-demand/)
+    - [Memories Worth Sharing: ENGRAM Learns to Be Told What to Keep – and What to Share](https://igor-polyakov.com/2026/06/30/memories-worth-sharing-engram-learns-to-be-told-what-to-keep-and-what-to-share/)
+    - [Where Memories Come From: ENGRAM Learns to Track Provenance and Group by Project](https://igor-polyakov.com/2026/06/18/where-memories-come-from-engram-learns-to-track-provenance-and-group-by-project/)    
+    - [A Mind That Knows What It’s Missing: ENGRAM Now Finds and Closes Its Own Gaps](https://igor-polyakov.com/2026/05/25/a-mind-that-knows-what-its-missing-engram-now-finds-and-closes-its-own-gaps/)
+    - [Completing the Mind: ENGRAM Now Remembers Conversations from Claude Desktop, ChatGPT, and Gemini](https://igor-polyakov.com/2026/05/16/completing-the-mind-engram-now-remembers-conversations-from-claude-desktop-chatgpt-and-gemini/)
+    - [Claude Code and ENGRAM Knowledge Hub: recalling the good memories together](https://igor-polyakov.com/2026/05/09/claude-code-and-engram-knowledge-hub-recalling-the-good-memories-together/)
+    - [ENGRAM Knowledge Hub: A Personal Knowledge Graph That Grows With Your Research](https://igor-polyakov.com/2026/04/30/engram-knowledge-hub-a-personal-knowledge-graph-that-grows-with-your-research/)
+    - [When Graphs Remember Better Than Summaries](https://igor-polyakov.com/2026/04/05/when-graphs-remember-better-than-summaries/)
+    - [ENGRAM Part 3: Hippocampal-Inspired Memory – Working Memory, Long-Term Memory, and Periodic Consolidation](https://igor-polyakov.com/2026/03/26/engram-part-3-hippocampal-inspired-memory-working-memory-long-term-memory-and-periodic-consolidation/)
     - [ENGRAM Part 2: Unified Graph Retrieval from Long Documents and Multi-Agent Response Synthesis](https://igor-polyakov.com/2026/03/24/engram-part-2-unified-graph-retrieval-from-long-documents-and-multi-agent-response-synthesis/)
     - [ENGRAM Part 1: GraphRAG with Hippocampal-Like Associative Retrieval](https://igor-polyakov.com/2026/03/23/engram-part-1-graphrag-with-hippocampal-like-associative-retrieval/)
     - [MCP, A2A, and Human-in-the-Loop: A Multi-Agent Threat Intelligence System in Practice](https://igor-polyakov.com/2026/02/16/mcp-a2a-and-human-in-the-loop-a-multi-agent-threat-intelligence-system-in-practice/)

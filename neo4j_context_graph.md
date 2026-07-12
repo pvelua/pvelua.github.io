@@ -107,3 +107,9 @@ You can effectively filter your views:
 * **`MATCH (n:Trace)-[:ACCESSED]->(m:Domain)`** -> Shows exactly which parts of your business data the AI is "thinking" about.
 
 ---
+
+## Refrences
+
+1. [Hands On With Context Graphs And Neo4j](https://neo4j.com/blog/agentic-ai/hands-on-with-context-graphs-and-neo4j/)
+2. [Context Graphs: A Practical Guide to Governed Context for LLMs, Agents, and Knowledge Systems](https://medium.com/@adnanmasood/context-graphs-a-practical-guide-to-governed-context-for-llms-agents-and-knowledge-systems-c49610c8ff27)
+3. [Why context graphs?](https://mintlify.wiki/neo4j-labs/create-context-graph/concepts/why-context-graphs)
