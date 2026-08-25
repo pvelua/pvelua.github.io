@@ -35,7 +35,7 @@ Weekly snippets, collected automatically:
 - Oracle Graph Database:
     - [Graph Views in Oracle DB](/oracle_graph_database.md)
 
-- Various::
+- Various:
     - [2026 Major Breakthroughs in Mathematics, so far](/maths-2026-breakthroughs.md)
     - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
     - [Humanity and Powerful AI](/humanity_and_ai.md)
@@ -43,7 +43,8 @@ Weekly snippets, collected automatically:
 
 - [Useful Resources](/references.md)
 
-- Blogs about projects in my GitHub repository:
+## Blogs about projects in my GitHub repository:
+
     - [When the Question Has a Right Answer: ENGRAM Allows Agents to Work from a Brief](https://igor-polyakov.com/2026/08/24/when-the-question-has-a-right-answer-engram-allows-agents-to-work-from-a-brief/)
     - [What the Transcript Couldn’t Tell Me: ENGRAM Learns to Read What Actually Shipped](https://igor-polyakov.com/2026/08/11/what-the-transcript-couldnt-tell-me-engram-learns-to-read-what-actually-shipped/)
     - [No Message Passed Between Them: ENGRAM Agents Coordinate Through Memory](https://igor-polyakov.com/2026/08/08/no-message-passed-between-them-engram-agents-coordinate-through-memory/)
