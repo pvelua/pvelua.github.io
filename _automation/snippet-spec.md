@@ -24,7 +24,7 @@ Exactly these keys, in this order. All are required except `tags`.
 
 ```yaml
 ---
-title: "AI & LLM Weekly — 30 August 2026"
+title: "AI and LLM Weekly — 30 August 2026"
 date: 2026-08-30
 categories: [ai]
 summary: "One sentence, under 25 words, naming the week's most notable item."
@@ -39,6 +39,9 @@ Rules:
   Never `AI`, never a string, never two categories.
 - `date` must match the date in the filename.
 - `title` uses an em-dash and the date spelled as `30 August 2026`.
+- **Never put `&` in a title.** Write `AI and LLM Weekly`, not `AI & LLM Weekly`.
+  An ampersand gets double-escaped by jekyll-feed and shows up in feed readers
+  as a literal `&amp;`.
 - `summary` is plain text, no Markdown, no quotes inside.
 - `item_count` must equal the number of snippets in the body.
 - `layout` is set automatically by `_config.yml`. Do not include it.
@@ -162,7 +165,7 @@ then delete it.
 
 ```markdown
 ---
-title: "AI & LLM Weekly — 24 August 2026"
+title: "AI and LLM Weekly — 24 August 2026"
 date: 2026-08-24
 categories: [ai]
 summary: "Sample digest used to verify the build. Delete once the first real run lands."
