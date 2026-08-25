@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article class="news-digest">
+
+  <h1 class="digest-title">{{ page.title }}</h1>
+
+  <p class="digest-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+    {%- if page.categories.size > 0 %} &middot; {{ page.categories | join: ", " }}{% endif -%}
+    {%- if page.item_count %} &middot; {{ page.item_count }} item{% if page.item_count != 1 %}s{% endif %}{% endif -%}
+  </p>
+
+  {%- if page.summary %}
+  <p class="digest-summary"><em>{{ page.summary }}</em></p>
+  {%- endif %}
+
+  {{ content }}
+
+  <hr>
+
+  <p>
+    <a href="{{ '/news/' | relative_url }}">&larr; All digests</a>
+    &middot;
+    <a href="{{ '/' | relative_url }}">Site home</a>
+  </p>
+
+</article>

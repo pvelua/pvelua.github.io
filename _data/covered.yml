@@ -1,0 +1,18 @@
+# Rolling ledger of source URLs already covered by the weekly digests.
+#
+# Appended by the scheduled Cowork jobs in the SAME commit as the digest that
+# uses them. The build check enforces two invariants:
+#   1. every URL in a digest appears here (the ledger was actually updated)
+#   2. no URL appears in more than one digest (dedup actually held)
+#
+# Prune entries older than ~90 days occasionally to keep the file small.
+
+entries:
+  - url: "https://example.com/a"
+    title: "Example lab publishes a smaller reasoning model"
+    date: "2026-08-24"
+    category: "ai"
+  - url: "https://example.com/b"
+    title: "Open problem in graph colouring reported settled"
+    date: "2026-08-24"
+    category: "ai"

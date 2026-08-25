@@ -1,4 +1,4 @@
-# Public Knowl;edge Base Site on GitHub
+# Public Knowledge Base Site on GitHub
 
 ## Welcome to GitHub Pages
 

@@ -1,3 +1,36 @@
 theme: jekyll-theme-architect
 title: Igor's KB Site
-description: A personal website for infomation sharing
+description: A personal website for information sharing
+
+url: https://pvelua.github.io
+timezone: America/Los_Angeles
+
+# Posts are news digests. Pages at repo root are unaffected by this permalink.
+permalink: /news/:categories/:year/:month/:day/:title/
+
+# Build posts even if the build runs before the post's local midnight.
+future: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  categories:
+    - ai
+    - breakthroughs
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - SETUP.md
+  - vendor

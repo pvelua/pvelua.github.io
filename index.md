@@ -2,6 +2,14 @@
 
 I use this site for publishing links to various libraries and releated documentation as well as short overviews of technologies that I am currently using in my projects or simply interested in learning more about them. The primary goal of publishiung this site is to make this infomation readily availble for me to use or share it with my friends. Other readers are welcomed as they may find this information interetysting as well.
 
+## News
+
+Weekly snippets, collected automatically:
+
+- [AI & LLM Weekly](https://pvelua.github.io/news/ai/)
+- [Breakthroughs in Mathematics, CS and Physics](https://pvelua.github.io/news/breakthroughs/)
+
+
 ## Table of Contents
 
 - General Topics:
@@ -36,6 +44,12 @@ I use this site for publishing links to various libraries and releated documenta
 - [Useful Resources](/references.md)
 
 - Blogs about projects in my GitHub repository:
+    - [When the Question Has a Right Answer: ENGRAM Allows Agents to Work from a Brief](https://igor-polyakov.com/2026/08/24/when-the-question-has-a-right-answer-engram-allows-agents-to-work-from-a-brief/)
+    - [What the Transcript Couldn’t Tell Me: ENGRAM Learns to Read What Actually Shipped](https://igor-polyakov.com/2026/08/11/what-the-transcript-couldnt-tell-me-engram-learns-to-read-what-actually-shipped/)
+    - [No Message Passed Between Them: ENGRAM Agents Coordinate Through Memory](https://igor-polyakov.com/2026/08/08/no-message-passed-between-them-engram-agents-coordinate-through-memory/)
+    - [What I Believed Last Tuesday: ENGRAM Learns to Change Its Mind](https://igor-polyakov.com/2026/07/24/what-i-believed-last-tuesday-engram-learns-to-change-its-mind/)
+    - [The Layer a Harness Can’t Own](https://igor-polyakov.com/2026/07/19/the-layer-a-harness-cant-own/)
+    - [A Team of Its Own: ENGRAM Agents Learn to Grow and Orchestrate a Team](https://igor-polyakov.com/2026/07/14/a-team-of-its-own-engram-agents-learn-to-grow-and-orchestrate-a-team/)
     - [Standing Up Your Own Agents: ENGRAM Adds an Agent Manager Role](https://igor-polyakov.com/2026/07/12/standing-up-your-own-agents-engram-adds-an-agent-manager-role/)
     - [A Brain Between Sessions — and Between Agents: ENGRAM Learns to Recall on Demand](https://igor-polyakov.com/2026/07/10/a-brain-between-sessions-and-between-agents-engram-learns-to-recall-on-demand/)
     - [Memories Worth Sharing: ENGRAM Learns to Be Told What to Keep – and What to Share](https://igor-polyakov.com/2026/06/30/memories-worth-sharing-engram-learns-to-be-told-what-to-keep-and-what-to-share/)

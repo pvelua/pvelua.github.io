@@ -6,6 +6,11 @@
 .env.production.local
 .env.*.local
 
+# Local development files
+internal/
+_site/
+.jekyll-cache/
+
 # IDE and Editor
 .vscode/
 .idea/
