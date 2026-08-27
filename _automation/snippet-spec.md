@@ -139,6 +139,21 @@ result, a major prize citing specific work. Preprints count only if a recognised
 expert has publicly vouched for the result. Not: incremental improvements, press
 releases, "scientists may have found", speculative preprints with no scrutiny.
 
+**Dating a breakthrough.** Judge the lookback window by whichever is later: when
+the result was published, or when it first reached general attention through
+credible coverage or expert commentary. A result that surfaces via Quanta, a
+Terence Tao post, or a formalisation months after the original preprint is news at
+the point it surfaced, not at the preprint's timestamp. When you admit something on
+this basis, say so plainly in the snippet — "published in March, brought to wider
+attention this month by ...".
+
+Two limits on that. Prize announcements are not a route in: a Fields Medal or Abel
+Prize citing work from previous years is not a breakthrough this month, and the
+underlying result qualifies only if it is genuinely new on its own terms. And
+coverage alone is not attention — a rehash of an old story by an aggregator does
+not restart the clock. What counts is the result becoming known to people who did
+not previously know it, evidenced by expert engagement.
+
 ## 9. Suggested sources
 
 Starting points, not a closed list. Follow through to primary sources freely.
