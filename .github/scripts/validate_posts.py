@@ -120,9 +120,6 @@ def main() -> int:
         if not snippets:
             fail(path, "no snippets found; each must start '### [text](https://url)'")
 
-        if cats == ["breakthroughs"] and 0 < len(snippets) < 2:
-            fail(path, "breakthroughs digests need at least 2 items, or should not be published at all")
-
         all_urls = [u.rstrip("/") for u in ANY_URL_RE.findall(body)]
         extra = [u for u in all_urls if u not in snippet_urls]
         if extra:

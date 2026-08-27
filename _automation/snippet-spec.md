@@ -14,9 +14,14 @@ one file per story. Never an article-length write-up.
 | Category | Filename | Items per digest | Cadence |
 |---|---|---|---|
 | `ai` | `_posts/YYYY-MM-DD-ai-weekly.md` | 5–8 | Weekly |
-| `breakthroughs` | `_posts/YYYY-MM-DD-breakthroughs-weekly.md` | 2–4 | Weekly, **skipped entirely if fewer than 2 items clear the bar** |
+| `breakthroughs` | `_posts/YYYY-MM-DD-breakthroughs-weekly.md` | 1–4 | Weekly, **skipped only if nothing clears the bar** |
 
 `YYYY-MM-DD` is the Sunday the digest covers up to, in `America/Los_Angeles`.
+
+**Lookback window.** `ai` covers the 7 days ending on that Sunday. `breakthroughs`
+covers a rolling **30 days**, because significant results arrive irregularly and a
+7-day window misses ones that landed a fortnight earlier. The dedup ledger in
+section 6 is what stops a result being reported twice, not the window.
 
 ## 2. Front matter
 
@@ -114,9 +119,12 @@ same category. Build an exclusion set.
 
 - `ai`: if fewer than 5 items clear the bar, publish what you have. Do not pad. Note
   the thin week in `summary`.
-- `breakthroughs`: if fewer than 2 items clear the bar, **do not open a PR at all.**
-  Report "nothing qualified this week" as the run's output and stop. Genuine
-  breakthroughs are rare and an empty week is the honest result.
+- `breakthroughs`: publish whenever **at least one** item clears the bar. A digest
+  with a single genuinely significant result is a good digest — do not hold it back
+  waiting for company. Only when **nothing** qualifies do you skip: open no PR,
+  report "nothing qualified" as the run's output, and stop.
+- The bar in section 8 is the only quality gate. Never treat the item count as a
+  second gate — if it cleared section 8, it publishes.
 
 ## 8. What clears the bar
 
