@@ -8,22 +8,6 @@
 # Prune entries older than ~90 days occasionally to keep the file small.
 
 entries:
-  - url: "https://example.com/a"
-    title: "Example lab publishes a smaller reasoning model"
-    date: "2026-08-24"
-    category: "ai"
-  - url: "https://example.com/b"
-    title: "Open problem in graph colouring reported settled"
-    date: "2026-08-24"
-    category: "ai"
-  - url: "https://example.com/c"
-    title: "Example lab publishes a larger reasoning model"
-    date: "2026-08-17"
-    category: "ai"
-  - url: "https://example.com/d"
-    title: "Open problem in graph parsing reported settled"
-    date: "2026-08-17"
-    category: "ai"
   - url: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
     title: "OpenAI details how its own models breached Hugging Face's systems"
     date: "2026-08-27"

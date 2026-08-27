@@ -6,8 +6,8 @@ I use this site for publishing links to various libraries and releated documenta
 
 Weekly snippets, collected automatically:
 
-- [AI & LLM Weekly](https://pvelua.github.io/news/ai/)
-- [Breakthroughs in Mathematics, CS and Physics](https://pvelua.github.io/news/breakthroughs/)
+- [AI & LLM Weekly]({{ '/news/ai/' | relative_url }})
+- [Breakthroughs in Mathematics, CS and Physics]({{ '/news/breakthroughs/' | relative_url }})
 
 
 ## Table of Contents
