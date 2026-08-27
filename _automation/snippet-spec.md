@@ -147,12 +147,15 @@ the point it surfaced, not at the preprint's timestamp. When you admit something
 this basis, say so plainly in the snippet — "published in March, brought to wider
 attention this month by ...".
 
-Two limits on that. Prize announcements are not a route in: a Fields Medal or Abel
-Prize citing work from previous years is not a breakthrough this month, and the
-underlying result qualifies only if it is genuinely new on its own terms. And
-coverage alone is not attention — a rehash of an old story by an aggregator does
-not restart the clock. What counts is the result becoming known to people who did
-not previously know it, evidenced by expert engagement.
+Two limits on that. **Prizes do not reset the clock on the work they cite.** A
+Fields Medal, Abel or Breakthrough Prize announced *within* the window is itself
+news and qualifies — write it as the award it is, noting what the work was and
+when it was done. What it does not do is make years-old underlying work eligible
+as a fresh breakthrough in its own right; that result qualifies separately only if
+it is genuinely new. And coverage alone is not attention — a rehash of an old
+story by an aggregator does not restart the clock. What counts is the result
+becoming known to people who did not previously know it, evidenced by expert
+engagement.
 
 ## 9. Suggested sources
 
