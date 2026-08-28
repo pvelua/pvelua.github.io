@@ -33,9 +33,11 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll build --strict-front-matter --trace
+        run: bundle exec jekyll build --strict_front_matter --trace
         env:
           JEKYLL_ENV: production
+          PAGES_REPO_NWO: pvelua/pvelua.github.io
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check links in changed digests
         run: |
