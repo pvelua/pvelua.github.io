@@ -10,40 +10,7 @@ Weekly snippets, collected automatically:
 - [Breakthroughs in Mathematics, CS and Physics]({{ '/news/breakthroughs/' | relative_url }})
 
 
-## Table of Contents
-
-- General Topics:
-    - [Python Agentic AI Frameworks](/agentic-frameworks.md)
-    - [Retrieval Architecture & Libraries](/retrievals_architecture.md)
-    - [Seed Data for Enterprise Systems](/seed_enterprise_data.md)
-
-- Google AI & Agent Developmnet Kit (ADK):
-    - [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
-    - [Inter-application Agents Communication with Google A2A](/a2a_inter-app_comm.md)
-    - [Google Vertex AI - Concise Guide](/vertex_ai_infra.md)
-
-- LangChain / LangGraph Framework:
-    - [LangChain & LangGraph — Concise Guide](/langchain-graph-guide.md)
-    - [Intra-Application Agent Communication in LangGraph](/langchain_inter-agent_comm.md)
-    - [LangChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
-
-- Neo4J Graph Database:
-    - [Graph Data Science (GDS) Library](/neo4j_GDS_library.md)
-    - [Neo4j's Cypher Quick Start](/neo4j_cypher_tips.md)
-    - [Neo4j Context Graph](./neo4j_context_graph.md)
-
-- Oracle Graph Database:
-    - [Graph Views in Oracle DB](/oracle_graph_database.md)
-
-- Various:
-    - [2026 Major Breakthroughs in Mathematics, so far](/maths-2026-breakthroughs.md)
-    - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
-    - [Humanity and Powerful AI](/humanity_and_ai.md)
-    - [Various Tips and How To Dos...](/tips_and_tricks.md)
-
-- [Useful Resources](/references.md)
-
-## My Blog Posts:
+## My Blog Posts on [Igor's Musings About Technology](https://igor-polyakov.com/)
 
 Blog posts about projects in my GitHub repository:
 
@@ -81,3 +48,38 @@ Blog posts about projects in my GitHub repository:
 - [RAG at Scale: The Hidden Trade-Offs of Single Vector Embedding](https://igor-polyakov.com/2025/09/17/rag-at-scale-the-hidden-trade-offs-of-single-vector-embedding/)
 - [From Static Rules to Smart Agents: Advent of Agentic Workflows](https://igor-polyakov.com/2025/09/15/from-static-rules-to-smart-agents-advent-of-agentic-workflows/)
 - [Why LLMs and Humans Think Differently: An Amateur Dive into AI’s Compression Problem](https://igor-polyakov.com/2025/09/10/why-llms-and-humans-think-differently-an-amateur-dive-into-ais-compression-problem/)
+
+
+## Knowledge Base Pages
+
+### General Topics:
+    - [Python Agentic AI Frameworks](/agentic-frameworks.md)
+    - [Retrieval Architecture & Libraries](/retrievals_architecture.md)
+    - [Seed Data for Enterprise Systems](/seed_enterprise_data.md)
+
+### Google AI & Agent Developmnet Kit (ADK):
+    - [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
+    - [Inter-application Agents Communication with Google A2A](/a2a_inter-app_comm.md)
+    - [Google Vertex AI - Concise Guide](/vertex_ai_infra.md)
+
+### LangChain / LangGraph Framework:
+    - [LangChain & LangGraph — Concise Guide](/langchain-graph-guide.md)
+    - [Intra-Application Agent Communication in LangGraph](/langchain_inter-agent_comm.md)
+    - [LangChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
+
+### Neo4J Graph Database:
+    - [Graph Data Science (GDS) Library](/neo4j_GDS_library.md)
+    - [Neo4j's Cypher Quick Start](/neo4j_cypher_tips.md)
+    - [Neo4j Context Graph](./neo4j_context_graph.md)
+
+### Oracle Graph Database:
+    - [Graph Views in Oracle DB](/oracle_graph_database.md)
+
+### Various:
+    - [2026 Major Breakthroughs in Mathematics, so far](/maths-2026-breakthroughs.md)
+    - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
+    - [Humanity and Powerful AI](/humanity_and_ai.md)
+    - [Various Tips and How To Dos...](/tips_and_tricks.md)
+
+- [Useful Resources](/references.md)
+
