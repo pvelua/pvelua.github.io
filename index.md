@@ -53,33 +53,34 @@ Blog posts about projects in my GitHub repository:
 ## Knowledge Base Pages
 
 ### General Topics:
-    - [Python Agentic AI Frameworks](/agentic-frameworks.md)
-    - [Retrieval Architecture & Libraries](/retrievals_architecture.md)
-    - [Seed Data for Enterprise Systems](/seed_enterprise_data.md)
+- [Python Agentic AI Frameworks](/agentic-frameworks.md)
+- [Retrieval Architecture & Libraries](/retrievals_architecture.md)
+- [Seed Data for Enterprise Systems](/seed_enterprise_data.md)
 
 ### Google AI & Agent Developmnet Kit (ADK):
-    - [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
-    - [Inter-application Agents Communication with Google A2A](/a2a_inter-app_comm.md)
-    - [Google Vertex AI - Concise Guide](/vertex_ai_infra.md)
+- [Google ADK (Agent Development Kit) — Concise Guide](/google-adk-guide.md)
+- [Inter-application Agents Communication with Google A2A](/a2a_inter-app_comm.md)
+- [Google Vertex AI - Concise Guide](/vertex_ai_infra.md)
 
 ### LangChain / LangGraph Framework:
-    - [LangChain & LangGraph — Concise Guide](/langchain-graph-guide.md)
-    - [Intra-Application Agent Communication in LangGraph](/langchain_inter-agent_comm.md)
-    - [LangChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
+- [LangChain & LangGraph — Concise Guide](/langchain-graph-guide.md)
+- [Intra-Application Agent Communication in LangGraph](/langchain_inter-agent_comm.md)
+- [LangChain Core: Prompts and Runnables for Agent Flows](/langchain-corte.md)
 
 ### Neo4J Graph Database:
-    - [Graph Data Science (GDS) Library](/neo4j_GDS_library.md)
-    - [Neo4j's Cypher Quick Start](/neo4j_cypher_tips.md)
-    - [Neo4j Context Graph](./neo4j_context_graph.md)
+- [Graph Data Science (GDS) Library](/neo4j_GDS_library.md)
+- [Neo4j's Cypher Quick Start](/neo4j_cypher_tips.md)
+- [Neo4j Context Graph](./neo4j_context_graph.md)
 
 ### Oracle Graph Database:
-    - [Graph Views in Oracle DB](/oracle_graph_database.md)
+- [Graph Views in Oracle DB](/oracle_graph_database.md)
 
 ### Various:
-    - [2026 Major Breakthroughs in Mathematics, so far](/maths-2026-breakthroughs.md)
-    - [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
-    - [Humanity and Powerful AI](/humanity_and_ai.md)
-    - [Various Tips and How To Dos...](/tips_and_tricks.md)
+- [2026 Major Breakthroughs in Mathematics, so far](/maths-2026-breakthroughs.md)
+- [2025 Major Brteakthroughs in Mathematics](/maths-2025-breakthroughs.md)
+- [Humanity and Powerful AI](/humanity_and_ai.md)
+- [Various Tips and How To Dos...](/tips_and_tricks.md)
 
-- [Useful Resources](/references.md)
+### [Useful Resources](/references.md)
 
+---
