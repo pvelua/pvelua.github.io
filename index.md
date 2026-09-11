@@ -14,6 +14,7 @@ Weekly snippets, collected automatically:
 
 Blog posts about projects in my GitHub repository:
 
+- [Something Smaller Than an Agent: ENGRAM Scopes Authority to a Shared Project](https://igor-polyakov.com/2026/09/10/something-smaller-than-an-agent-engram-scopes-authority-to-a-shared-project/)
 - [When the Question Has a Right Answer: ENGRAM Allows Agents to Work from a Brief](https://igor-polyakov.com/2026/08/24/when-the-question-has-a-right-answer-engram-allows-agents-to-work-from-a-brief/)
 - [What the Transcript Couldn’t Tell Me: ENGRAM Learns to Read What Actually Shipped](https://igor-polyakov.com/2026/08/11/what-the-transcript-couldnt-tell-me-engram-learns-to-read-what-actually-shipped/)
 - [No Message Passed Between Them: ENGRAM Agents Coordinate Through Memory](https://igor-polyakov.com/2026/08/08/no-message-passed-between-them-engram-agents-coordinate-through-memory/)
