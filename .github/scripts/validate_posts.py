@@ -3,6 +3,12 @@
 
 Runs on every PR. Exits non-zero with a readable report if anything is wrong,
 so a malformed digest can never reach master.
+
+Ledgers: every file matching _data/covered*.yml is loaded and merged into one
+dedup set. Each job writes only its own _data/covered-<category>.yml, so three
+jobs never touch the same file, while cross-category uniqueness is still
+enforced here. The legacy _data/covered.yml is picked up by the same glob and
+can be left in place as history.
 """
 
 import datetime as dt
@@ -14,9 +20,10 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 POSTS = ROOT / "_posts"
-COVERED = ROOT / "_data" / "covered.yml"
+DATA = ROOT / "_data"
+LEDGER_GLOB = "covered*.yml"
 
-VALID_CATEGORIES = {"ai", "breakthroughs"}
+VALID_CATEGORIES = {"ai", "breakthroughs", "data"}
 FILENAME_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})-([a-z0-9-]+)\.md$")
 SNIPPET_RE = re.compile(r"^### \[(?P<text>[^\]]+)\]\((?P<url>https?://[^)\s]+)\)\s*$", re.M)
 ANY_URL_RE = re.compile(r"\((?P<url>https?://[^)\s]+)\)")
@@ -42,20 +49,45 @@ def split_front_matter(raw: str):
 
 
 def load_covered() -> dict[str, dict]:
-    if not COVERED.exists():
-        errors.append("_data/covered.yml is missing")
+    """Merge every _data/covered*.yml into one url -> entry map."""
+    ledgers = sorted(DATA.glob(LEDGER_GLOB)) if DATA.exists() else []
+    if not ledgers:
+        errors.append(f"no ledger files found matching _data/{LEDGER_GLOB}")
         return {}
-    data = yaml.safe_load(COVERED.read_text()) or {}
-    entries = data.get("entries") or []
-    if not isinstance(entries, list):
-        errors.append("_data/covered.yml: 'entries' must be a list")
-        return {}
-    out = {}
-    for entry in entries:
-        if not isinstance(entry, dict) or "url" not in entry:
-            errors.append(f"_data/covered.yml: bad entry {entry!r}")
+
+    out: dict[str, dict] = {}
+    for ledger in ledgers:
+        rel = ledger.relative_to(ROOT)
+        try:
+            data = yaml.safe_load(ledger.read_text()) or {}
+        except yaml.YAMLError as exc:
+            errors.append(f"{rel}: not valid YAML: {exc}")
             continue
-        out[entry["url"].rstrip("/")] = entry
+
+        entries = data.get("entries")
+        if entries is None:
+            entries = []
+        if not isinstance(entries, list):
+            errors.append(f"{rel}: 'entries' must be a list")
+            continue
+
+        for entry in entries:
+            if not isinstance(entry, dict) or "url" not in entry:
+                errors.append(f"{rel}: bad entry {entry!r}")
+                continue
+            url = entry["url"].rstrip("/")
+            prior = out.get(url)
+            if prior and prior["_ledger"] != str(rel):
+                errors.append(
+                    f"{rel}: {url} is also listed in {prior['_ledger']} - "
+                    "a source URL belongs to exactly one ledger"
+                )
+                continue
+            entry = dict(entry)
+            entry["_ledger"] = str(rel)
+            out[url] = entry
+
+    print(f"Loaded {len(out)} ledger entries from {len(ledgers)} file(s).")
     return out
 
 
@@ -97,6 +129,9 @@ def main() -> int:
         elif cats[0] not in VALID_CATEGORIES:
             fail(path, f"unknown category {cats[0]!r}; expected one of {sorted(VALID_CATEGORIES)}")
 
+        if isinstance(front.get("title"), str) and "&" in front["title"]:
+            fail(path, "title must not contain '&' - jekyll-feed double-escapes it; write 'and'")
+
         date = front.get("date")
         if isinstance(date, dt.datetime):
             date = date.date()
@@ -129,7 +164,7 @@ def main() -> int:
             if snippet_urls.count(url) > 1:
                 fail(path, f"duplicate URL within the digest: {url}")
             if url not in covered:
-                fail(path, f"{url} is not in _data/covered.yml - the ledger was not updated")
+                fail(path, f"{url} is in no _data/covered*.yml - the ledger was not updated")
             if url in seen_urls and seen_urls[url] != path.name:
                 fail(path, f"{url} was already used in {seen_urls[url]}")
             seen_urls[url] = path.name
