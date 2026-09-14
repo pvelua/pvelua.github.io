@@ -1,0 +1,5 @@
+# Rolling ledger of source URLs covered by the AI and LLM digest.
+# Only the ai job writes here. See _data/covered-data.yml for the full note.
+# _data/covered.yml holds pre-split history and is read-only.
+
+entries: []

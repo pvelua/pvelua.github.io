@@ -19,6 +19,7 @@ plugins:
 feed:
   categories:
     - ai
+    - data
     - breakthroughs
 
 defaults:

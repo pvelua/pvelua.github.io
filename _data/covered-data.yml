@@ -1,0 +1,13 @@
+# Rolling ledger of source URLs covered by the Data and Orchestration digest.
+#
+# Appended by the scheduled Cowork job in the SAME commit as the digest that
+# uses them. Only the data job writes here.
+#
+# The build check merges every _data/covered*.yml into one dedup set and
+# enforces:
+#   1. every URL in a digest appears in some ledger
+#   2. no URL appears in two ledgers, or in two digests
+#
+# Prune entries older than ~90 days occasionally to keep the file small.
+
+entries: []
