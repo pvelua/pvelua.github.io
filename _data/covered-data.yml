@@ -10,4 +10,28 @@
 #
 # Prune entries older than ~90 days occasionally to keep the file small.
 
-entries: []
+entries:
+  - url: "https://aws.amazon.com/about-aws/whats-new/2026/09/agentcore-memory-direct-ingest/"
+    title: "AWS lets developers write straight into an agent's long-term memory"
+    date: "2026-09-14"
+    category: "data"
+  - url: "https://weaviate.io/blog/hfresh"
+    title: "Weaviate's disk-based vector index reaches general availability"
+    date: "2026-09-14"
+    category: "data"
+  - url: "https://www.prefect.io/blog/is-your-mcp-server-actually-good"
+    title: "FastMCP 4 ships alongside a field guide to building MCP servers that don't bloat the context window"
+    date: "2026-09-14"
+    category: "data"
+  - url: "https://www.langchain.com/blog/organizing-context-in-a-multi-agent-harness"
+    title: "LangChain gives multi-agent subagents two distinct ways to inherit context"
+    date: "2026-09-14"
+    category: "data"
+  - url: "https://www.llamaindex.ai/blog/just-in-time-agentic-ocr"
+    title: "LlamaIndex's two-pass pattern skips expensive OCR on most pages"
+    date: "2026-09-14"
+    category: "data"
+  - url: "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents"
+    title: "LangChain adds per-caller identity to its managed agent credentials"
+    date: "2026-09-14"
+    category: "data"
