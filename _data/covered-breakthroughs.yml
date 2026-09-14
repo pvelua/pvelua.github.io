@@ -2,4 +2,8 @@
 # Only the breakthroughs job writes here. See _data/covered-data.yml for the
 # full note. _data/covered.yml holds pre-split history and is read-only.
 
-entries: []
+entries:
+  - url: "https://arxiv.org/abs/2603.24880"
+    title: "A new algorithmic proof of the four-color theorem cuts coloring time from quadratic to near-linear"
+    date: "2026-09-14"
+    category: "breakthroughs"
