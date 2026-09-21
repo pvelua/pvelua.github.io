@@ -7,3 +7,7 @@ entries:
     title: "A new algorithmic proof of the four-color theorem cuts coloring time from quadratic to near-linear"
     date: "2026-09-14"
     category: "breakthroughs"
+  - url: "https://arxiv.org/abs/2510.20765"
+    title: "A proof of the Kim-Vu sandwich conjecture"
+    date: "2026-09-20"
+    category: "breakthroughs"
