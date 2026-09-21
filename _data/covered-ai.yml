@@ -2,4 +2,32 @@
 # Only the ai job writes here. See _data/covered-data.yml for the full note.
 # _data/covered.yml holds pre-split history and is read-only.
 
-entries: []
+entries:
+  - url: "https://openai.com/index/model-misalignment-reporting-framework/"
+    title: "OpenAI commits to publishing AI misalignment incidents as they're found"
+    date: "2026-09-19"
+    category: "ai"
+  - url: "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+    title: "Anthropic proposes public metrics for how fast AI labs are automating themselves"
+    date: "2026-09-19"
+    category: "ai"
+  - url: "https://www.hacktron.ai/blog/hacking-openai"
+    title: "Security researchers used Claude to compress a novel OpenAI exploit chain into three days"
+    date: "2026-09-19"
+    category: "ai"
+  - url: "https://www.forbes.com/sites/siladityaray/2026/09/17/zuckerberg-musk-and-jensen-reportedly-convinced-trump-to-block-ai-regulator/"
+    title: "Zuckerberg, Musk and Huang persuade Trump to shelve an industry-funded AI regulator"
+    date: "2026-09-19"
+    category: "ai"
+  - url: "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    title: "A startup founded by an ex-OpenAI researcher ships a model built to decide, not chat"
+    date: "2026-09-19"
+    category: "ai"
+  - url: "https://www.anthropic.com/news/life-sciences-verification-program"
+    title: "Anthropic opens a verified-access track for biology researchers using Claude"
+    date: "2026-09-19"
+    category: "ai"
+  - url: "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/"
+    title: "Google turns its CC assistant into an agent that runs household logistics for families"
+    date: "2026-09-19"
+    category: "ai"
