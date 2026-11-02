@@ -27,3 +27,7 @@ entries:
     title: "An AI-written proof of the quasi-Riemann hypothesis wins over number theorists"
     date: "2026-10-25"
     category: "breakthroughs"
+  - url: "https://eccc.weizmann.ac.il/report/2026/281/"
+    title: "Experts independently re-prove that matrix multiplication needs exponent at most 9/4"
+    date: "2026-11-01"
+    category: "breakthroughs"
