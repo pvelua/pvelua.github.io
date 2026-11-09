@@ -31,3 +31,7 @@ entries:
     title: "Experts independently re-prove that matrix multiplication needs exponent at most 9/4"
     date: "2026-11-01"
     category: "breakthroughs"
+  - url: "https://scottaaronson.blog/?p=10295"
+    title: "Aaronson-Ambainis conjecture reported proved by an AI-driven research system"
+    date: "2026-11-09"
+    category: "breakthroughs"
