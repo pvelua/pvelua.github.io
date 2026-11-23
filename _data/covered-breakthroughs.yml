@@ -43,3 +43,7 @@ entries:
     title: "Review group says OpenAI's AI-built proof constructs four-dimensional Yang–Mills theory"
     date: "2026-11-15"
     category: "breakthroughs"
+  - url: "https://alpo.ge/remark.pdf"
+    title: "Riemann hypothesis proof found with Claude is certified by the Lean community"
+    date: "2026-11-22"
+    category: "breakthroughs"
